@@ -20,6 +20,7 @@ import { LoginService } from './services/login.service';
 import { LoginGuard } from './guards/login-permission.guard';
 import { PageFiveComponent } from './components/page-five/page-five.component';
 import { PageSixComponent } from './components/page-six/page-six.component';
+import { CreateUserFormComponent } from './components/create-user-form/create-user-form.component';
 
 
 
@@ -36,6 +37,7 @@ import { PageSixComponent } from './components/page-six/page-six.component';
     LoginFormComponent,
     PageFiveComponent,
     PageSixComponent,
+    CreateUserFormComponent,
   ],
   imports: [
     BrowserModule,
