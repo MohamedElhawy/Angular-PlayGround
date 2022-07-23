@@ -1,2 +1,2 @@
 # Angular-PlayGround
-an angular project to text angular new features
+an angular project to test angular new features
