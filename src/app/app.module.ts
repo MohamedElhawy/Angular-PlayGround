@@ -21,6 +21,9 @@ import { LoginGuard } from './guards/login-permission.guard';
 import { PageFiveComponent } from './components/page-five/page-five.component';
 import { PageSixComponent } from './components/page-six/page-six.component';
 import { CreateUserFormComponent } from './components/create-user-form/create-user-form.component';
+import { CheckFormGuard } from './guards/check-form.guard';
+import { ConfirmationBoxComponent } from './components/confirmation-box/confirmation-box.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -38,12 +41,15 @@ import { CreateUserFormComponent } from './components/create-user-form/create-us
     PageFiveComponent,
     PageSixComponent,
     CreateUserFormComponent,
+    ConfirmationBoxComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [PageTwoService , UserResolver , CarResolver , CarService , PermissionGuard , PermissionService , LoginService , LoginGuard],
+  providers: [PageTwoService , UserResolver , CarResolver , CarService , PermissionGuard , PermissionService , LoginService , LoginGuard , CheckFormGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
