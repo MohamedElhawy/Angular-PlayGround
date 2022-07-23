@@ -1,0 +1,31 @@
+<!-- users -->
+<h2>Users :</h2>
+<ul>
+    <li *ngFor="let user of users; let i = index">{{ user.name }}, {{ user.age }}, {{ user.password }}</li>
+</ul>
+
+
+<!-- cars -->
+<h2>Cars :</h2>
+<ul>
+    <li *ngFor="let car of cars; let i = index">{{ car.name }}, {{ car.color }}, {{ car.model }}</li>
+</ul>
+
+
+<br>
+<br>
+
+<button type="button" (click)="locking(true)">unlock</button>
+<button type="button" (click)="locking(false)">lock</button>
+
+<br>
+<br>
+
+<h4>unlock login form</h4>
+<button type="button" (click)="unlock_loging_in()">unlock</button>
+
+<h4>3rd page login</h4>
+<button type="button" routerLink="/3nd-page/login">go</button>
+
+<br>
+<br>
