@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './components/app/app.component';
 import { AppRoutingModule } from './modules/app-routing.module';
@@ -23,7 +24,12 @@ import { PageSixComponent } from './components/page-six/page-six.component';
 import { CreateUserFormComponent } from './components/create-user-form/create-user-form.component';
 import { CheckFormGuard } from './guards/check-form.guard';
 import { ConfirmationBoxComponent } from './components/confirmation-box/confirmation-box.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReverseStringPipe } from './pipes/reverse-string.pipe';
+import { PageSevenComponent } from './components/page-seven/page-seven.component';
+import { PageNineComponent } from './components/page-nine/page-nine.component';
+import { PageTenComponent } from './components/page-ten/page-ten.component';
+import { SwitchElDelayDirective } from './directives/switch-el-delay.directive';
+import { PageEightComponent } from './components/page-eight/page-eight.component';
 
 
 
@@ -42,12 +48,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PageSixComponent,
     CreateUserFormComponent,
     ConfirmationBoxComponent,
+    ReverseStringPipe,
+    PageSevenComponent,
+    PageEightComponent,
+    PageNineComponent,
+    PageTenComponent,
+    SwitchElDelayDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [PageTwoService , UserResolver , CarResolver , CarService , PermissionGuard , PermissionService , LoginService , LoginGuard , CheckFormGuard],
   bootstrap: [AppComponent]
