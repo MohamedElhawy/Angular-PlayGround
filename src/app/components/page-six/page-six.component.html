@@ -1,1 +1,18 @@
-<p>page-six works!</p>
+<h2 style="color: gold;">Pipes</h2>
+<br>
+
+
+<h3>build-in pipes</h3>
+
+<ul>
+    <li>{{ today | date }}</li>
+    <li>{{ today | date : "short" }}</li>
+    <li>{{ today | date | uppercase }}</li>
+    <li>{{ today | date | lowercase }}</li>
+</ul>
+
+<br>
+
+<h3>custom pipes</h3>
+
+<p>the reverse of "hi my name is mohamed." is "{{ "hi my name is mohamed." | reverseString : "hh" : "wddw" : "3wdws" | uppercase }}"</p>

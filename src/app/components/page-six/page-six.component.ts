@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageSixComponent implements OnInit {
 
+
+  today : string = new Date().toDateString();
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+
+    
+
+
   }
 
 }

@@ -1,0 +1,15 @@
+<h2 style="color: gold;">Structured directives</h2>
+<br>
+
+<!-- inside ng-template -->
+<div class="alert alert-primary" role="alert" *switchDelayDir="2000 second 3000 third 5000 select 0 elRef anotherEl">
+    First sentence, HorrRrray! ⭐
+</div>
+
+
+<ng-template #anotherEl>
+    <div class="alert alert-success" role="alert">
+        Second sentence, Damn Hot 🌶️🔥
+    </div>
+</ng-template>
+
