@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MessageComponent } from "../components/message/message.component";
 import { NewRoutingModule } from "./new-routing.module";
 
@@ -16,7 +17,9 @@ import { NewRoutingModule } from "./new-routing.module";
     ],
     imports: [
         CommonModule,
-        NewRoutingModule
+        NewRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     providers: [],
 })

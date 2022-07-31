@@ -30,6 +30,8 @@ import { PageNineComponent } from './components/page-nine/page-nine.component';
 import { PageTenComponent } from './components/page-ten/page-ten.component';
 import { SwitchElDelayDirective } from './directives/switch-el-delay.directive';
 import { PageEightComponent } from './components/page-eight/page-eight.component';
+import { PageElevenComponent } from './components/page-eleven/page-eleven.component';
+import { ChildComponentComponent } from './components/child-component/child-component.component';
 
 
 
@@ -54,6 +56,8 @@ import { PageEightComponent } from './components/page-eight/page-eight.component
     PageNineComponent,
     PageTenComponent,
     SwitchElDelayDirective,
+    PageElevenComponent,
+    ChildComponentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReverseStringPipe } from 'src/app/pipes/reverse-string.pipe';
+
+
 
 import { PageSixComponent } from './page-six.component';
 
@@ -8,7 +11,7 @@ describe('PageSixComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageSixComponent ]
+      declarations: [ PageSixComponent , ReverseStringPipe ]
     })
     .compileComponents();
   });

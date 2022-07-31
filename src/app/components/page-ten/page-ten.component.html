@@ -1,1 +1,23 @@
-<p>page-ten works!</p>
+<h2 style="color: gold;">Model, ViewModel and FormData</h2>
+<br>
+
+
+
+<form [formGroup]="form">
+    <label>Name : </label>
+    <br>
+    <input type="text" formControlName="name">
+    <br>
+
+    <label>Age : </label>
+    <br>
+    <input type="number" formControlName="age">
+    <br>
+
+    <label>Picture : </label>
+    <br>
+    <input type="file" (change)="get_form_image($event.target)">
+
+    <br><br>
+    <input type="submit" value="Click" (click)="send_form_data()">
+</form>

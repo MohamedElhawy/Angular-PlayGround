@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '../interfaces/user.interface';
 
-@Injectable()
+@Injectable({providedIn:'root'})
 export class PageTwoService {
 
   

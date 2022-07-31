@@ -5,6 +5,7 @@ import { Error404Component } from '../components/error404/error404.component';
 import { HomeComponent } from '../components/home/home.component';
 import { LoginFormComponent } from '../components/login-form/login-form.component';
 import { PageEightComponent } from '../components/page-eight/page-eight.component';
+import { PageElevenComponent } from '../components/page-eleven/page-eleven.component';
 import { PageFiveComponent } from '../components/page-five/page-five.component';
 import { PageFourComponent } from '../components/page-four/page-four.component';
 import { PageNineComponent } from '../components/page-nine/page-nine.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: "8nd-page" , component: PageEightComponent  },
   { path: "9nd-page" , component: PageNineComponent  },
   { path: "10nd-page" , component: PageTenComponent  },
+  { path: "11nd-page" , component: PageElevenComponent  },
   {
     path: "new",
     loadChildren : () => import("./new.module").then((m)=>m.NewModule),
