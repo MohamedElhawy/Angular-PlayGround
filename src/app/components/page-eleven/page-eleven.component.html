@@ -1,5 +1,36 @@
-<h2 style="color: gold;">@Input and @Output</h2>
+<h2 style="color: gold;">@Input, @Output and ngOnChanges</h2>
 <br>
 
 
-<app-child-component></app-child-component>
+
+
+<div class="alert alert-success" role="alert">
+    Parent!
+
+    <br>
+
+    <button (click)="sign_in()">sign in</button>
+    <button (click)="sign_out()">log out</button>
+
+    <br>
+
+    <p>The child send data : <strong>{{ child_data }}</strong></p>
+
+    <br>
+
+    <app-child-component [data]="newData" (increase_count)="update_child_value($event)"></app-child-component>
+
+</div>
+
+
+
+
+<div class="container">
+    <strong>here is example of @ViewChild :</strong>
+    <br>
+    <p #textRef>this is a predefined text.</p> 
+
+    <button (click)="change_text()">click me :D</button>
+</div>
+
+
