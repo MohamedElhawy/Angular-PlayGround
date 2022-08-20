@@ -32,6 +32,11 @@ import { SwitchElDelayDirective } from './directives/switch-el-delay.directive';
 import { PageEightComponent } from './components/page-eight/page-eight.component';
 import { PageElevenComponent } from './components/page-eleven/page-eleven.component';
 import { ChildComponentComponent } from './components/child-component/child-component.component';
+import { PageTwelveComponent } from './components/page-twelve/page-twelve.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './interceptors/token.interceptor';
+import { PageThirteenComponent } from './components/page-thirteen/page-thirteen.component';
+import { PageFourteenComponent } from './components/page-fourteen/page-fourteen.component';
 
 
 
@@ -58,14 +63,27 @@ import { ChildComponentComponent } from './components/child-component/child-comp
     SwitchElDelayDirective,
     PageElevenComponent,
     ChildComponentComponent,
+    PageTwelveComponent,
+    PageThirteenComponent,
+    PageFourteenComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [PageTwoService , UserResolver , CarResolver , CarService , PermissionGuard , PermissionService , LoginService , LoginGuard , CheckFormGuard],
+  providers: 
+  [
+    PageTwoService , UserResolver , CarResolver , CarService , PermissionGuard,
+    PermissionService , LoginService , LoginGuard , CheckFormGuard, 
+    {
+      provide : HTTP_INTERCEPTORS,
+      useClass : TokenInterceptor,
+      multi : true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

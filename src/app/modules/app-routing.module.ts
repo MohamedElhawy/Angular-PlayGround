@@ -8,11 +8,14 @@ import { PageEightComponent } from '../components/page-eight/page-eight.componen
 import { PageElevenComponent } from '../components/page-eleven/page-eleven.component';
 import { PageFiveComponent } from '../components/page-five/page-five.component';
 import { PageFourComponent } from '../components/page-four/page-four.component';
+import { PageFourteenComponent } from '../components/page-fourteen/page-fourteen.component';
 import { PageNineComponent } from '../components/page-nine/page-nine.component';
 import { PageSevenComponent } from '../components/page-seven/page-seven.component';
 import { PageSixComponent } from '../components/page-six/page-six.component';
 import { PageTenComponent } from '../components/page-ten/page-ten.component';
+import { PageThirteenComponent } from '../components/page-thirteen/page-thirteen.component';
 import { PageThreeComponent } from '../components/page-three/page-three.component';
+import { PageTwelveComponent } from '../components/page-twelve/page-twelve.component';
 import { PageTwoComponent } from '../components/page-two/page-two.component';
 import { AllowLoadingGuard } from '../guards/allow-loading.guard';
 import { CheckFormGuard } from '../guards/check-form.guard';
@@ -38,6 +41,9 @@ const routes: Routes = [
   { path: "9nd-page" , component: PageNineComponent  },
   { path: "10nd-page" , component: PageTenComponent  },
   { path: "11nd-page" , component: PageElevenComponent  },
+  { path: "12nd-page" , component: PageTwelveComponent  },
+  { path: "13nd-page" , component: PageThirteenComponent  },
+  { path: "14nd-page" , component: PageFourteenComponent  },
   {
     path: "new",
     loadChildren : () => import("./new.module").then((m)=>m.NewModule),

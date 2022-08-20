@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilder } from '@angular/forms';
 
 import { PageTenComponent } from './page-ten.component';
 
@@ -8,7 +9,7 @@ describe('PageTenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageTenComponent ]
+      declarations: [ PageTenComponent , FormBuilder ],
     })
     .compileComponents();
   });
@@ -19,7 +20,5 @@ describe('PageTenComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 });
