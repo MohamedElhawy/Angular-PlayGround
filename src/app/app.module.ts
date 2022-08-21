@@ -37,6 +37,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { PageThirteenComponent } from './components/page-thirteen/page-thirteen.component';
 import { PageFourteenComponent } from './components/page-fourteen/page-fourteen.component';
+import { StoreModule } from '@ngrx/store';
+import { SimpleReducer } from './reducers/simple.reducer';
+import { person_reducer } from './reducers/person.reducer';
 
 
 
@@ -72,7 +75,8 @@ import { PageFourteenComponent } from './components/page-fourteen/page-fourteen.
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ message : SimpleReducer })
   ],
   providers: 
   [

@@ -6,8 +6,25 @@
 <!-- body -->
 <div class="container home-body">
 
-
+    <!-- app -->
     <router-outlet></router-outlet>
+
+
+</div>
+
+
+<!-- ngrx -->
+<div class="container mb-5 pb-5">
+    <!-- state change -->
+
+    <p class="m-0 font-monospace"> <span class="m-0" style="font-size: 30px; color: gold; font-weight: 700; transform: scale(2);">&excl;</span> please, ignore me! just a humble state here.</p>
+    
+    {{ message_state | async }}
+    <br>
+    <button (click)="send_message_in_spanish()">Spanish message</button>
+    <br>
+    <br>
+    <button (click)="send_message_in_french()">French message</button>
 
 
 </div>
