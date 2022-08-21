@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { MessageInterface } from 'src/app/interfaces/message.interface';
+import { Person } from 'src/app/interfaces/person.model';
 
 @Component({
   selector: 'app-page-fourteen',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageFourteenComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store : Store<MessageInterface>) { }
 
   ngOnInit(): void {
+
+    this.store.select("message");
+
+
+
   }
 
 }
