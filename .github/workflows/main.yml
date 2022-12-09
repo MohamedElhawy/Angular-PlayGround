@@ -1,1 +1,43 @@
-defaults:
+# name of workflow
+name: 
+  build and deploy angular app
+  
+# trigger of workflow
+on:
+  push:
+    branches: ["master"]
+    
+# actual work that workflow will do
+jobs:
+  build-and-deploy:
+    name: start 🚀
+    runs-on: windows-latest
+    steps:
+    
+      - name: Install checkout required for node.js nstallation
+        uses: actions/checkout@v2
+
+      - name: Set up node.js (with it comes npm)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'npm'
+          
+      - name: 🔨 Build Project
+        run: |
+          npm install webpack
+          npm install --legacy-peer-deps
+          npm run build
+          
+          ##   npm -> "scripts": {
+          ##              "build": "ng build --configuration production",
+          ##              }
+                    
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.SERVER }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          local-dir: ./dist/browser/
+      
